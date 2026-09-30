@@ -99,6 +99,8 @@ Git + GitHub Desktop
 GitHub Pages (deploy)
 📁 Estrutura atual
 link-na-bio/
+├── docs/
+│   └── planejamento.md
 ├── css/
 │   └── tokens.css
 ├── js/
