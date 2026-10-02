@@ -1,0 +1,64 @@
+/* =========================================================
+   DESIGN TOKENS — link-na-bio
+   Tema padrão: escuro. Tema claro: [data-theme="light"]
+   ========================================================= */
+
+:root {
+    /* ---- Cores (tema escuro) ---- */
+    --text: #eae9fc;
+    /* 17.4:1 sobre o fundo  */
+    --background: #010104;
+    --primary: #27912f;
+    /* botões dos links       */
+    --text-on-primary: #010104;
+    /* 5.1:1 sobre o primary  */
+    --secondary: #5a53df;
+    /* bordas, ícones, foco   */
+    --accent: #565298;
+    /* detalhes decorativos   */
+
+    /* ---- Tipografia ---- */
+    --font-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --text-sm: 0.875rem;
+    /* 14px */
+    --text-base: 1rem;
+    /* 16px */
+    --text-lg: 1.25rem;
+    /* 20px */
+    --text-xl: 1.75rem;
+    /* 28px — nome no perfil */
+
+    /* ---- Espaçamentos ---- */
+    --space-1: 0.5rem;
+    /* 8px  */
+    --space-2: 1rem;
+    /* 16px */
+    --space-3: 1.5rem;
+    /* 24px */
+    --space-4: 2rem;
+    /* 32px */
+
+    /* ---- Bordas ---- */
+    --radius: 0.75rem;
+}
+
+[data-theme="light"] {
+    /* Só as CORES mudam. Fonte e espaços continuam os mesmos. */
+    --text: #040316;
+    /* 19.7:1 sobre o fundo  */
+    --background: #fbfbfe;
+    --primary: #1e6f24;
+    /* verde mais escuro      */
+    --text-on-primary: #fbfbfe;
+    /* 6.1:1 sobre o primary  */
+    --secondary: #2720ac;
+    /* 10.8:1 sobre o fundo   */
+    --accent: #6b67ad;
+    /* 4.9:1 sobre o fundo    */
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: var(--font-base);
+}
