@@ -99,15 +99,18 @@ Git + GitHub Desktop
 GitHub Pages (deploy)
 📁 Estrutura atual
 link-na-bio/
-├── docs/
-│   └── planejamento.md
-├── css/
-│   └── tokens.css
-├── js/
-│   └── dados.js
+├── index.html          ← única página; a "porta de entrada"
+├── README.md
 ├── .gitignore
-├── index.html
-└── README.md
+├── css/
+│   ├── tokens.css      ← (Etapa 2) cores, fontes, espaçamentos
+│   └── estilos.css     ← (Etapa 4) layout e componentes
+├── js/
+│   ├── dados.js        ← (Etapa 2) perfil + links
+│   ├── interface.js    ← (Etapa 5) funções que montam o HTML
+│   └── app.js          ← (Etapa 5) ponto de partida + tema claro/escuro
+└── img/
+    └── avatar.jpg      ← sua foto (ou uma imagem qualquer por enquanto)
 ▶️ Como executar
 Clone o repositório pelo GitHub Desktop (File → Clone repository).
 Abra o arquivo index.html no navegador.
