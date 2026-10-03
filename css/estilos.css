@@ -1,1 +1,27 @@
 /* Estilos Globais CSS que dependem das variaveis de cores */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul > li{
+    text-decoration: none;
+}
+
+.card {
+    border: 1px solid white;
+}
