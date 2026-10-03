@@ -16,7 +16,10 @@ img {
 }
 
 ul > li{
+    display: block;
     text-decoration: none;
+    padding: 1rem;
+    min-height: 44px;
 }
 
 .card {
