@@ -22,6 +22,10 @@ ul > li{
     min-height: 44px;
 }
 
+ul >li:hover , ul > li:focus-visible{
+    background-color: aliceblue;
+}
+
 .card {
     /* border: 1px solid white; */
     min-height: 100vh;
