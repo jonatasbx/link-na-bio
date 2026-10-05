@@ -1,1 +1,162 @@
-/* Estilos Globais CSS que dependem das variaveis de cores */
+/* ==========================================================
+   estilos.css — aparência da página
+   Regra: cores e fontes SEMPRE via var(--...) do tokens.css
+   ========================================================== */
+
+/* ---------- 1. Reset ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ---------- 2. Página ---------- */
+body {
+    margin: 0;
+    min-height: 100vh;
+    /* a página ocupa a tela toda */
+    padding: var(--espaco);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-base);
+    line-height: 1.5;
+
+    /* centraliza o cartão no meio da tela */
+    display: flex;
+    justify-content: center;
+    /* centro na horizontal */
+    align-items: center;
+    /* centro na vertical */
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ---------- 3. Cartão ---------- */
+.card {
+    width: 100%;
+    max-width: 30rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--cor-superficie);
+    text-align: center;
+
+    /* empilha header, main e footer em coluna */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ---------- 4. Perfil (header) ---------- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* centraliza foto, nome, bio e botão */
+    gap: 0.5rem;
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    /* foto redonda */
+    object-fit: cover;
+    /* não distorce a foto */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header p {
+    margin: 0;
+    color: var(--cor-texto-suave);
+}
+
+/* Botão de tema (o ÚNICO <button> da página — ação na própria página) */
+header button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--cor-destaque);
+    border-radius: 999px;
+    /* formato de pílula */
+    background-color: transparent;
+    color: var(--cor-texto);
+    font-family: var(--fonte-base);
+    cursor: pointer;
+}
+
+/* ---------- 5. Lista de links ---------- */
+.lista-links {
+    list-style: none;
+    /* tira as bolinhas */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    /* espaço entre os links */
+}
+
+/* Os LINKS <a> com visual de botão */
+.link {
+    display: block;
+    /* o link ocupa a largura toda */
+    min-height: 44px;
+    /* área boa para o dedo */
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    background-color: var(--cor-destaque);
+    color: var(--cor-destaque-texto);
+    text-decoration: none;
+    /* tira o sublinhado */
+    font-weight: 600;
+}
+
+.link:hover {
+    opacity: 0.85;
+}
+
+/* contorno para quem navega com a tecla Tab */
+.link:focus-visible,
+header button:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 3px;
+}
+
+/* ---------- 6. Rodapé ---------- */
+footer {
+    font-size: 0.875rem;
+    color: var(--cor-texto-suave);
+}
+
+/* ---------- 7. Telas maiores (tablet e PC) ---------- */
+/* Só vale quando a janela tem 768px ou MAIS.
+   Aqui ficam apenas as propriedades que MUDAM. */
+@media (min-width: 768px) {
+
+    .card {
+        padding: 3rem;
+        /* era 2rem: mais respiro dentro do cartão */
+    }
+
+    header img {
+        width: 150px;
+        /* era 120px: foto maior */
+        height: 150px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        /* era 1.5rem: nome maior */
+    }
+
+    .lista-links {
+        gap: 1rem;
+        /* era 0.75rem: links mais espaçados */
+    }
+}
