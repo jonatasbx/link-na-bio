@@ -133,3 +133,30 @@ footer {
     font-size: 0.875rem;
     color: var(--cor-texto-suave);
 }
+
+/* ---------- 7. Telas maiores (tablet e PC) ---------- */
+/* Só vale quando a janela tem 768px ou MAIS.
+   Aqui ficam apenas as propriedades que MUDAM. */
+@media (min-width: 768px) {
+
+    .card {
+        padding: 3rem;
+        /* era 2rem: mais respiro dentro do cartão */
+    }
+
+    header img {
+        width: 150px;
+        /* era 120px: foto maior */
+        height: 150px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        /* era 1.5rem: nome maior */
+    }
+
+    .lista-links {
+        gap: 1rem;
+        /* era 0.75rem: links mais espaçados */
+    }
+}
